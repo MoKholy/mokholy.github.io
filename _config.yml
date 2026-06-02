@@ -55,6 +55,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+scholar_name: "Mohammed Elkholy"
 author:
   name   : "Mohammed Elkholy"
   avatar : "/assets/images/bio-photo-2.jpg"
@@ -88,29 +89,43 @@ footer:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/moelkholy/"
 
+collections:
+  publications:
+    output: true
+    permalink: /publications/
+
+
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
+  -scope:
+    path: ""
+    type: publications
     values:
       layout: single
       author_profile: true
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+# defaults:
+#   # _posts
+#   - scope:
+#       path: ""
+#       type: posts
+#     values:
+#       layout: single
+#       author_profile: true
+#       read_time: true
+#       comments: true
+#       share: true
+#       related: true
+#   # _pages
+#   - scope:
+#       path: "_pages"
+#       type: pages
+#     values:
+#       layout: single
+#       author_profile: true
+
+# category_archive:
+#   type: liquid
+#   path: /categories/
+# tag_archive:
+#   type: liquid
+#   path: /tags/
