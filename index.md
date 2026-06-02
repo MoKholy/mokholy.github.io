@@ -12,3 +12,15 @@ I am a Research Engineer at the [AramLab](https://aramlab.ai/) @ MBZUAI, I am al
 - Interpretability
 - Representation Learning
 - Training dynamics
+
+## News
+
+<div class="news-list">
+{% assign news_items = site.data.news | sort: "date" | reverse %}
+{% for item in news_items limit:5 %}
+  <div class="news-item">
+    <span class="news-date">{{ item.date | date: "%b %-d, %Y" }}</span>
+    <span class="news-title">{{ item.title }}</span>
+  </div>
+{% endfor %}
+</div>
