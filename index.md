@@ -6,9 +6,7 @@ layout: single
 author_profile: true
 ---
 
-# About
-
-I am a Research Engineer at the AramLab @ MBZUAI, I am also an incoming PhD student @ MBZUAI, working under the supervision of [Bashar Alhafni](https://www.basharalhafni.com/). I currently work on Arabic NLP.
+I am a Research Engineer at the [AramLab](https://aramlab.ai/) @ MBZUAI, I am also an incoming PhD student @ MBZUAI, working under the supervision of [Bashar Alhafni](https://www.basharalhafni.com/). I currently work on Arabic NLP.
 
 ## Research Interests
 - Interpretability
