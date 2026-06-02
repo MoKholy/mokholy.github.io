@@ -75,6 +75,9 @@ author:
     - label: "Google Scholar"
       icon: "fab fa-fw fa-google-scholar"
       url: "https://scholar.google.com/citations?user=UTE_N-cAAAAJ&hl=en"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:mohammed.elkholy@mbzuai.ac.ae"
 
 footer:
   links:
