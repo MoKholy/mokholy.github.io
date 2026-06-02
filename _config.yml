@@ -51,9 +51,9 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jemoji
   - jekyll-include-cache
+    # - jekyll-feed
 
 scholar_name: "Mohammed Elkholy"
 author:
@@ -92,13 +92,19 @@ footer:
 collections:
   publications:
     output: true
-    permalink: /publications/
-
+    permalink: /publications/:path/
 
 defaults:
-  -scope:
-    path: ""
-    type: publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+
+  - scope:
+      path: "_pages"
+      type: pages
     values:
       layout: single
       author_profile: true
