@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Mohammed Elkholy"
-  avatar : "/assets/images/bio-photo-1.jpg"
+  avatar : "/assets/images/bio-photo-1.png"
   bio    : "RE @ AramLab @ MBZUAI, Incoming PhD Student @ MBZUAI, Prev: Applied Sci @ Microsoft Shopping."
   links:
     - label: "Website"
