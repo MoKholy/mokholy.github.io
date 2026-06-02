@@ -9,4 +9,5 @@ authors:
     - Hamada Rizk
     - Moustafa Youssef
 paperurl: "https://dl.acm.org/doi/abs/10.1145/3589132.3628374"
+poster: "/assets/posters/SigSpatial_2023_poster.pdf
 ---
