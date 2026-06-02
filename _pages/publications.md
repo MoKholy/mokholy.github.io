@@ -23,22 +23,18 @@ author_profile: true
 
 <div class="publication-entry">
   <div class="publication-number">[{{ pub_index }}]</div>
-
   <div class="publication-content">
     <div class="publication-title">
       {{ pub.title }}
     </div>
-
     <div class="publication-authors">
       {% for author in pub.authors %}{% if author == site.scholar_name %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
     </div>
-
     {% if pub.venue %}
     <div class="publication-venue">
       {{ pub.venue }}
     </div>
     {% endif %}
-
     <div class="publication-links">
       {% if pub.paperurl %}<a href="{{ pub.paperurl }}">Paper</a>{% endif %}
       {% if pub.codeurl %} · <a href="{{ pub.codeurl }}">Code</a>{% endif %}
@@ -46,7 +42,6 @@ author_profile: true
       {% if pub.posterurl %} · <a href="{{ pub.posterurl }}">Poster</a>{% endif %}
       {% if pub.websiteurl %} · <a href="{{ pub.websiteurl }}">Project Page</a>{% endif %}
     </div>
-
     {% if pub.excerpt %}
     <div class="publication-abstract">
       {{ pub.excerpt }}
