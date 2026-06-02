@@ -5,57 +5,54 @@ permalink: /publications/
 author_profile: true
 ---
 
-# Publications
-
 {% assign publications = site.publications | sort: "date" | reverse %}
 {% assign current_year = "" %}
+{% assign pub_index = 0 %}
 
 {% for pub in publications %}
-
 {% assign pub_year = pub.date | date: "%Y" %}
 
 {% if pub_year != current_year %}
 {% assign current_year = pub_year %}
+{% assign pub_index = 0 %}
+
 ## {{ current_year }}
 {% endif %}
 
-### {{ pub.title }}
+{% assign pub_index = pub_index | plus: 1 %}
 
-{% for author in pub.authors %}
-{% if author == site.scholar_name %}
-<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}
-{% endfor %}
+<div class="publication-entry">
+  <div class="publication-number">[{{ pub_index }}]</div>
 
-{% if pub.venue %}
-  
-*{{ pub.venue }}*
+  <div class="publication-content">
+    <div class="publication-title">
+      {{ pub.title }}
+    </div>
 
-{% endif %}
+    <div class="publication-authors">
+      {% for author in pub.authors %}{% if author == site.scholar_name %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+    </div>
 
-{% assign links = "" %}
+    {% if pub.venue %}
+    <div class="publication-venue">
+      {{ pub.venue }}
+    </div>
+    {% endif %}
 
-{% if pub.paperurl %}
-[Paper]({{ pub.paperurl }})
-{% endif %}
-{% if pub.codeurl %}
- | [Code]({{ pub.codeurl }})
-{% endif %}
-{% if pub.slidesurl %}
- | [Slides]({{ pub.slidesurl }})
-{% endif %}
-{% if pub.posterurl %}
- | [Poster]({{ pub.posterurl }})
-{% endif %}
-{% if pub.websiteurl %}
- | [Project Page]({{ pub.websiteurl }})
-{% endif %}
+    <div class="publication-links">
+      {% if pub.paperurl %}<a href="{{ pub.paperurl }}">Paper</a>{% endif %}
+      {% if pub.codeurl %} · <a href="{{ pub.codeurl }}">Code</a>{% endif %}
+      {% if pub.slidesurl %} · <a href="{{ pub.slidesurl }}">Slides</a>{% endif %}
+      {% if pub.posterurl %} · <a href="{{ pub.posterurl }}">Poster</a>{% endif %}
+      {% if pub.websiteurl %} · <a href="{{ pub.websiteurl }}">Project Page</a>{% endif %}
+    </div>
 
-{% if pub.excerpt %}
-  
-{{ pub.excerpt }}
-
-{% endif %}
-
----
+    {% if pub.excerpt %}
+    <div class="publication-abstract">
+      {{ pub.excerpt }}
+    </div>
+    {% endif %}
+  </div>
+</div>
 
 {% endfor %}

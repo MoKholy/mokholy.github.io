@@ -1,0 +1,63 @@
+---
+# Only the main Sass file needs front matter
+---
+
+@import "minimal-mistakes";
+
+.publication-entry {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.4rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .publication-number {
+    font-size: 0.85rem;
+    color: #666;
+    padding-top: 0.1rem;
+  }
+  
+  .publication-title {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.35;
+    margin-bottom: 0.25rem;
+  }
+  
+  .publication-authors {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin-bottom: 0.2rem;
+  }
+  
+  .publication-venue {
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.35;
+    margin-bottom: 0.35rem;
+  }
+  
+  .publication-links {
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+  }
+  
+  .publication-abstract {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #555;
+    margin-top: 0.35rem;
+  }
+  
+  @media (max-width: 600px) {
+    .publication-entry {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+  
+    .publication-number {
+      display: none;
+    }
+  }
